@@ -168,28 +168,38 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12rem;
+    gap: 11rem;
 }
 
 .project{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    text-align: justify;
 }
 
 .project a picture img{
     width: 30rem;
     height: 30rem;
+    box-shadow: 0 0 2rem rgba(38, 36, 39, 0.986);
     border-radius: 10px;
 }
+
 
 .project-info{
     max-width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    font-size: 1.8rem;
+    justify-content: space-between;
+    
+    
+    p, ul{
+        font-size: 1.6rem;
+    }
+
+    h4{
+        font-size: 1.8rem;
+        font-style: solid;
+    }
     ul{
         display: grid;
         justify-content: center;
@@ -197,4 +207,46 @@ ul{
     }
 }
 
+.buttons{
+    display: flex;
+    justify-content: space-around;
+
+    a{
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 1rem 2.5rem;
+        border-radius: 1rem;
+        background: var(--light-gray-color);
+        color: var(--menu-color);
+        transition: all 200ms ease-in-out;
+    }
+
+    a:hover{
+        transform: scale(1.1);
+    }
+}
+
+.skills-content{
+    min-height: 50vh;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-skill{
+    height: 7rem;
+    width: 7rem;
+    transition: all 200ms ease-in-out;
+}
+
+.icon-skill:hover{
+    transform: scale(1.1)
+}
 
