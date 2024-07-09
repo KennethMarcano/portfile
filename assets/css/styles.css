@@ -3,7 +3,7 @@
 :root {
     --primary-color: #122f51;
     --secondary-color: #ffffff;
-    --light-gray-color: #b4b4b4;
+    --light-gray-color: #dbd6d6;
     --menu-color: #1a3a75;
 }
 
@@ -237,16 +237,34 @@ ul{
 
 .skills{
     display: flex;
-    justify-content: space-between;
+    animation: scroll 30s linear infinite;
+    -webkit-animation: scroll 30s linear infinite;
+    width: calc(7rem * 14);
+    gap: 7rem;
+}
+
+.slider-skills{
+    
+    overflow: hidden;
 }
 
 .icon-skill{
     height: 7rem;
     width: 7rem;
-    transition: all 200ms ease-in-out;
 }
 
 .icon-skill:hover{
     transform: scale(1.1)
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-7rem * 14));
+        transform: translateX(calc(-7rem * 14));
+    }
 }
 
