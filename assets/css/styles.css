@@ -50,7 +50,6 @@ h6 {
 
 h1 {
     font-size: 4rem;
-    text-transform: uppercase;
 }
 
 h2 {
@@ -63,10 +62,11 @@ h3 {
 
 .main-content {
     max-width: 120rem;
-    margin: 0 20%;
+    margin: 0 18%;
 }
 
 .menu {
+    z-index: 1;
     background: var(--menu-color);
     backdrop-filter: blur(10px);
     position: fixed;
@@ -80,6 +80,8 @@ h3 {
 
 .menu-content {
     display: flex;
+    border-right: 1px solid #dbd6d6;
+    border-left: 1px solid #dbd6d6;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -161,7 +163,7 @@ ul{
 
 .contacts{
     display: flex;
-    gap: 4.5rem;
+    gap: 7rem;
 }
 
 .projects-content{
@@ -172,9 +174,10 @@ ul{
 }
 
 .project{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 68% 30%;
+    gap: 3rem;
 }
 
 .project a picture img{
@@ -184,12 +187,19 @@ ul{
     border-radius: 10px;
 }
 
+.project iframe{
+    width: 100%;
+    height: 47rem;
+    border: none;
+    box-shadow: 0 0 2rem rgba(38, 36, 39, 0.986);
+    border-radius: 10px;
+}
+
 
 .project-info{
-    max-width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     
     
     p, ul{
@@ -212,18 +222,30 @@ ul{
     justify-content: space-around;
 
     a{
+        position: relative;
         text-decoration: none;
-        font-weight: bolder;
-        padding: 1rem 2.5rem;
+        padding: 1rem 1rem;
         border-radius: 1rem;
-        background: var(--light-gray-color);
-        color: var(--menu-color);
+        color: var(--light-gray-color);
         transition: all 200ms ease-in-out;
     }
 
-    a:hover{
-        transform: scale(1.1);
+    a::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0.8rem;
+        width: 0;
+        height: 0.1rem;
+        background: var(--light-gray-color);
+        transition: all 300ms ease-in-out; 
     }
+    
+    a:hover::after{
+        width: 80%;
+        left: 10%;
+    }
+
 }
 
 .skills-content{
@@ -231,12 +253,14 @@ ul{
     padding-top: 10rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5rem;
     text-align: center;
 }
 
 .skills{
     display: flex;
+    align-items: center;
     animation: scroll 30s linear infinite;
     -webkit-animation: scroll 30s linear infinite;
     width: calc(7rem * 14);
@@ -248,12 +272,48 @@ ul{
     overflow: hidden;
 }
 
-.icon-skill{
+.icon-html{
     height: 7rem;
     width: 7rem;
 }
 
-.icon-skill:hover{
+.icon-css{
+    height: 6.5rem;
+    width: 7rem;
+}
+
+.icon-js{
+    height: 7rem;
+    width: 7rem;
+}
+
+.icon-ts{
+    height: 6rem;
+    width: 7rem;
+}
+
+.icon-nodejs{
+    height: 6rem;
+    width: 7rem;
+}
+
+.icon-sql{
+    height: 6.5rem;
+    width: 7rem;
+}
+
+.icon-react{
+    height: 7rem;
+    width: 7rem;
+}
+
+.skills img{
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+
+.skills img:hover{
     transform: scale(1.1)
 }
 
@@ -267,4 +327,24 @@ ul{
         transform: translateX(calc(-7rem * 14));
     }
 }
+
+.footer{
+    color: var(--light-gray-color);
+    background: var(--menu-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.contactMe{
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+}
+
+.show{
+    opacity: 1;
+}
+
 
