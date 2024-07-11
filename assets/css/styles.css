@@ -361,8 +361,11 @@ ul{
         text-align: center;
         gap: 3rem
     }
+    .name-contact{
+        max-width: 90%;
+    }
     .name-contact .contacts{
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 0;
     }
 
