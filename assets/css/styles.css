@@ -350,7 +350,7 @@ ul{
     transition: all 1000ms ease-in-out;
 }
 
-.show{
+.show1{
     opacity: 1;
 }
 
@@ -395,11 +395,9 @@ ul{
     .home{
         padding-top: 3rem;
     }
+
     .close-menu{
         display: block;
-    }
-    .close-menu::after{
-        content: '☰';
         position: fixed;
         z-index: 2;
         top: 2rem;
@@ -409,5 +407,12 @@ ul{
         color: var(--menu-color);
         padding: 0.8rem 1.3rem;
         border-radius: 0.3rem;
+    }
+
+    .close-menu {
+        content: 'X';
+    }
+    .show2{
+        display: flex;
     }
 }
