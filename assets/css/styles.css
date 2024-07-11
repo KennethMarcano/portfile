@@ -80,8 +80,6 @@ h3 {
 
 .menu-content {
     display: flex;
-    border-right: 1px solid #dbd6d6;
-    border-left: 1px solid #dbd6d6;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -386,11 +384,14 @@ ul{
     .menu-content{
         display: none;
         flex-direction: column;
-        gap: 1rem;
         ul{
             flex-direction: column;
-            gap: 2rem;
+            gap: 3rem;
         }
+    }
+
+    .menu-content nav ul li a{
+        padding: 1rem 0;
     }
     .home{
         padding-top: 3rem;
