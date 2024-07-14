@@ -80,8 +80,7 @@ h3 {
     right: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    background: rgba(18, 57, 81, 0.1);
-    transition: all 150ms ease-in-out;
+    background: inherit 0.1;
 }
 
 .showBorderShadow{
@@ -477,6 +476,9 @@ ul{
         ul{
             flex-direction: column;
             gap: 3rem;
+        }
+        nav{
+            flex-direction: column;
         }
     }
 
