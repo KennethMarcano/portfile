@@ -24,16 +24,63 @@
             <h4>Kenneth M. - Portfolio</h4>
             <nav>
                 <ul>
-                    <li><a href="#home">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li id="sectionSelect"><a href="#home">Home</a></li>
+                    <li id="sectionSelect"><a href="#about">About</a></li>
+                    <li id="sectionSelect"><a href="#projects">Projects</a></li>
+                    <li id="sectionSelect"><a href="#skills">Skills</a></li>
+                    <li id="sectionSelect"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
     <section id="home" class="section primary-bg">
+        <div class="home main-content">
+            <div class="profile-picture">
+                <img src="/assets/img/foto-perfil/foto-perfil-2-copi.jpg" alt="photo">
+                <div>
+                    <h2>Kenneth Marcano</h2>
+                    <h5>Software Developer</h5>
+                </div>
+            </div>
+            <div class="name-contact">
+                <h4></h4>
+                <p>As an electronic engineer passionate about developing web applications and interactive products with
+                    technologies such as JavaScript, Node.js, TypeScript and React, I see web programming as the perfect
+                    combination of creativity and logic. My goal is to deliver exceptional results and push the
+                    boundaries of what is possible in web development, creating interactive, innovative experiences and
+                    cutting-edge functional websites.</p> 
+                    <p>If you are looking for a talented and committed web developer to bring your vision to life in the
+                    digital world, I would love to collaborate and explore how we can work together to take your
+                    projects to a new level. I look forward to connecting and starting this exciting collaboration!</p>
+                <ul class="contacts">
+                    <li class="contact">
+                        <a href="https://github.com/KennethMarcano" target="_blank">
+                            <img src="/assets/img/contacs/github-svgrepo-com.svg" alt="GitHub">
+                        </a>
+                    </li>
+                    <li class="contact">
+                        <a href="mailto:kennethmarcano96@outlook.com" target="_blank">
+                            <img src="/assets/img/contacs/email-mail-web-svgrepo-com.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="contact">
+                        <a href="https://www.linkedin.com/in/kenneth-marcano-868447184/" target="_blank">
+                            <img src="assets/img/contacs/linkedin-svgrepo-com.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="contact">
+                        <a href="https://1drv.ms/b/c/777a4594c5017b56/EdgDRK_V5adBrlKa3gAo-dgBoe-E5WlmgNePQ-g4HudMmQ?e=PAm7cC"
+                            target="_blank">
+                            <img src="assets/img/contacs/document-general-letter-4-svgrepo-com.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section primary-bg">
         <div class="home main-content">
             <div class="profile-picture">
                 <img src="/assets/img/foto-perfil/foto-perfil-2-copi.jpg" alt="photo">
@@ -176,7 +223,7 @@
     </section>
 
 
-    <footer class="footer section">
+    <section id="contact" class="footer section">
         <div id="contactMe1" class="contactMe">
             <h1>Contact me!</h1>
         </div>
@@ -205,7 +252,7 @@
                 </li>
             </ul>
         </div>
-    </footer>
+    </section>
 
     <script src="/assets/js/index.js"></script>
 </body>
