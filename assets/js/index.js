@@ -1,3 +1,4 @@
+
 window.addEventListener('scroll', () => {
     const menu = document.getElementById('menu');
     const home = document.getElementById('home');
@@ -9,11 +10,8 @@ window.addEventListener('scroll', () => {
     const distance1 = contactMe1.getBoundingClientRect().top;
     const distance2 = contactMe2.getBoundingClientRect().top;
     const distanceHome = home.getBoundingClientRect().top;
-    // console.log(distanceHome)
-    // console.log(sectionSelect)
-    console.log(sections[2].getBoundingClientRect().top)
-    console.log(sections[2].getBoundingClientRect().bottom)
     for (i = 0; i < sections.length; i++) {
+
         var bounding = sections[i].getBoundingClientRect();
         if (bounding.top < 400 &&
             bounding.bottom > 412
@@ -25,12 +23,6 @@ window.addEventListener('scroll', () => {
         }
     }
 
-    // if(distanceHome === 30){
-    //     homeLi.classList.add('selectSection');
-    // }
-    // else{
-    //     homeLi.classList.remove('selectSection');
-    // }
     if (window.scrollY === 0) {
         menu.classList.remove('showBorderShadow')
     }
@@ -67,7 +59,21 @@ closeMenu.addEventListener('click', () => {
         menuContent.classList.remove('show2');
         closeMenu.textContent = '☰'
     }
-    console.log('clickado');
 })
 
-
+let mudaCor = false;
+const lightBlack = document.getElementById('lightBlack');
+lightBlack.addEventListener('click', () => {
+    const body = document.body;
+    if (mudaCor) {
+        body.classList.remove('secondary-bg');
+        body.classList.add('primary-bg');
+        lightBlack.textContent = '☀️';
+    }
+    else {
+        body.classList.add('secondary-bg');
+        body.classList.remove('primary-bg');
+        lightBlack.textContent = '🌙';
+    }
+    mudaCor = !mudaCor;
+})
