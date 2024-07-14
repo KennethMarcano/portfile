@@ -139,7 +139,7 @@ ul{
 
 .home{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
@@ -150,16 +150,39 @@ ul{
     justify-content: center;
     align-items: left;
     max-width: 60rem;
-    gap: 1rem;
     p {
         font-size: 1.6rem;
         padding-bottom: 2rem;
     }
-
+    h2{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 90% 10%;
+    }
 }
 
+.soft-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hand {
+    animation: wave 2s infinite; 
+    max-width: 25rem;
+    font-size: 6rem;
+}  
+
+@keyframes wave {  
+    0% { transform: rotate(0deg); }  
+    25% { transform: rotate(20deg); }  
+ 
+}  
+
+
+
 .profile-picture{
-    max-width: 40rem;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,14 +226,30 @@ ul{
 
 .contacts{
     display: flex;
+    gap: 3rem;
+}
+
+.contactsMe{
+    display: flex;
     gap: 7rem;
 }
 
+.about{
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    h2{
+        text-align: center;
+    }
+}
+
 .projects-content{
+    padding-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    gap: 8rem;
 }
 
 .project{
@@ -391,7 +430,13 @@ ul{
     }
     .name-contact{
         max-width: 90%;
+        h2{
+            font-size: 2rem;
+        }
     }
+    .hand {
+        font-size: 4rem;
+    }  
     .name-contact .contacts{
         justify-content: space-between;
         gap: 0;
