@@ -61,7 +61,7 @@ closeMenu.addEventListener('click', () => {
     }
 })
 
-let mudaCor = false;
+let mudaCor = true;
 const lightBlack = document.getElementById('lightBlack');
 lightBlack.addEventListener('click', () => {
     const body = document.body;
