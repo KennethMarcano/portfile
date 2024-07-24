@@ -398,8 +398,7 @@ left: 0;
 .icon, .icon-2{
     cursor: pointer;
     transition: all 200ms ease-in-out;
-    height: 5.5rem;
-    width: 5.5rem;
+    max-width: 5rem;
 }
 
 .skills img:hover {
@@ -484,16 +483,14 @@ left: 0;
     }
 
     .skills{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
         animation: none;
         max-width: 100%;
-        gap: 0;
-    }
-
-    .icon{
-        height: 8%;
-        width: 8%;
+        gap: 3rem;
+        img{
+            margin: auto;
+        }
     }
 
     .icon-2{
@@ -555,5 +552,9 @@ left: 0;
     .contactsMe{
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .skills{
+        grid-template-columns: auto auto;
     }
 }
