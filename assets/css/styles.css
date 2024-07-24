@@ -273,31 +273,37 @@ ul{
 }
 
 .projects{
-    position: relative;  
-    max-width: 600px;
-    margin: auto;  
+    position: relative;
+    display: flex;
     overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 60vh;
 }
 
 .slider-projects{
-    display: flex;  
+    display: flex;
+    max-width: 80%; 
     transition: transform 0.5s ease;  
 }
 
 .project{
     display: grid;
-    min-width: 100%;
     grid-template-columns: 60% 35%;
     align-items: center;
     gap: 3rem;
 }
 
-button.prev{
-    left: 10px;
+.button-slider{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: all 300ms ease-in-out;
 }
 
-button.prev{
-    right: 10px;
+.button-slider:hover{
+    transform: scale(1.4);
 }
 
 .project img{
@@ -322,7 +328,7 @@ button.prev{
     }
     ul{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
     }
 }
@@ -377,8 +383,8 @@ button.prev{
     align-items: center;
     animation: scroll 30s linear infinite;
     -webkit-animation: scroll 30s linear infinite;
-    width: calc(7rem * 14);
-    gap: 7rem;
+    width: calc(6rem * 14);
+    gap: 8rem;
 }
 
 .slider-skills{
@@ -436,8 +442,8 @@ button.prev{
         transform: translateX(0);
     }
     100%{
-        -webkit-transform: translateX(calc(-7rem * 14));
-        transform: translateX(calc(-7rem * 14));
+        -webkit-transform: translateX(calc(-6rem * 14));
+        transform: translateX(calc(-6rem * 14));
     }
 }
 
@@ -487,10 +493,17 @@ button.prev{
         gap: 0;
     }
 
+    .projects{
+        min-height: 90vh;
+    }
+
     .project{
         grid-template-columns: 1fr;
-        h3{
-            text-align: center;
+        p{
+            text-align: justify;
+        }
+        ul{
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 

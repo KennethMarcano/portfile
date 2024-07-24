@@ -41,7 +41,7 @@ function showSlides() {
     }  
     currentSlide++;  
     if (currentSlide > slides.length) { currentSlide = 1 } 
-    slides[currentSlide - 1].style.display = "block"; 
+    slides[currentSlide - 1].style.display = "grid"; 
 }  
 
 function moveSlide(n) {  
@@ -52,7 +52,7 @@ function moveSlide(n) {
     for (let i = 0; i < slides.length; i++) {  
         slides[i].style.display = "none";   
     }  
-    slides[currentSlide - 1].style.display = "block";  
+    slides[currentSlide - 1].style.display = "grid";  
 }  
 
 showSlides();  
