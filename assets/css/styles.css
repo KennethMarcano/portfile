@@ -258,6 +258,10 @@ ul{
     h2{
         text-align: center;
     }
+
+    p{
+        font-size: 1.6rem;
+    }
 }
 
 .projects-content{
@@ -268,12 +272,32 @@ ul{
     gap: 8rem;
 }
 
+.projects{
+    position: relative;  
+    max-width: 600px;
+    margin: auto;  
+    overflow: hidden;
+}
+
+.slider-projects{
+    display: flex;  
+    transition: transform 0.5s ease;  
+}
+
 .project{
     display: grid;
-    width: 100%;
+    min-width: 100%;
     grid-template-columns: 60% 35%;
     align-items: center;
     gap: 3rem;
+}
+
+button.prev{
+    left: 10px;
+}
+
+button.prev{
+    right: 10px;
 }
 
 .project img{
@@ -293,7 +317,7 @@ ul{
     }
 
     h3{
-        font-size: 3rem;
+        font-size: 2.2rem;
         font-style: solid;
     }
     ul{
@@ -312,6 +336,7 @@ ul{
     justify-content: left;
 
     a{
+        font-size: 1.6rem;
         position: relative;
         text-decoration: none;
         padding: 1rem 1rem;
@@ -357,7 +382,6 @@ ul{
 }
 
 .slider-skills{
-    
     overflow: hidden;
 }
 
@@ -423,7 +447,7 @@ ul{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15rem;
+    gap: 10rem;
 }
 
 .contactMe{
@@ -521,7 +545,13 @@ ul{
     .close-menu {
         content: 'X';
     }
+
     .show2{
         display: flex;
+    }
+
+    .contactsMe{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
