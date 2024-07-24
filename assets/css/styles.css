@@ -289,8 +289,6 @@ ul{
 .button-slider{
     color: inherit;
     background: none;
-    margin-top: auto;
-    margin-bottom: auto;
     border: none;
     cursor: pointer;
     font-size: 1.6rem;
@@ -463,6 +461,7 @@ left: 0;
         font-size: 4rem;
     }  
     .name-contact .contacts{
+        align-self: center;
         justify-content: space-between;
         gap: 0;
     }
