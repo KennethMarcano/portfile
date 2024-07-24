@@ -32,30 +32,34 @@ function showInWindows(element, distance, heightWindow, percentWindows){
         return;
     }
     return element.classList.remove('show1');
-}
+} 
 
 function showSlides() {  
     const slides = document.getElementsByClassName("project");  
-    for (let i = 0; i < slides.length; i++) {  
-        slides[i].style.display = "none";
-    }  
     currentSlide++;  
-    if (currentSlide > slides.length) { currentSlide = 1 } 
-    slides[currentSlide - 1].style.display = "grid"; 
+    if (currentSlide >= slides.length) { currentSlide = 0; } 
+    updateSlider();  
 }  
 
 function moveSlide(n) {  
+    const slides = document.getElementsByClassName("project"); 
     currentSlide += n;  
-    const slides = document.getElementsByClassName("project");  
-    if (currentSlide > slides.length) { currentSlide = 1; }  
-    if (currentSlide < 1) { currentSlide = slides.length; }  
-    for (let i = 0; i < slides.length; i++) {  
-        slides[i].style.display = "none";   
-    }  
-    slides[currentSlide - 1].style.display = "grid";  
+    if (currentSlide >= slides.length) { currentSlide = 0; }  
+    if (currentSlide < 0) { currentSlide = slides.length - 1; }  
+    updateSlider();  
 }  
 
-showSlides();  
+function updateSlider() {  
+    const slides = document.getElementsByClassName("slider-projects")[0];  
+    const slideWidth = slides.clientWidth; 
+    slides.style.transform = `translateX(${-currentSlide * slideWidth}px)`; 
+}  
+ 
+updateSlider();
+
+window.addEventListener('resize',() => {
+    updateSlider();
+})
 
 window.addEventListener('scroll', () => {
     const menu = document.getElementById('menu');
