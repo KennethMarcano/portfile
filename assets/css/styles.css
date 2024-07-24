@@ -252,6 +252,7 @@ ul{
 
 .projects-content{
     display: block;
+    padding: 0;
 }
 
 .projects-content h2{
@@ -383,55 +384,25 @@ left: 0;
     animation: scroll 30s linear infinite;
     -webkit-animation: scroll 30s linear infinite;
     width: calc(6rem * 14);
-    gap: 8rem;
+    gap: 10rem;
 }
 
-.slider-skills{
+.slider-skills {
     overflow: hidden;
 }
 
-.icon-html{
-    height: 6rem;
-    width: 6rem;
+.skills {
+    min-height: 7rem;
 }
 
-.icon-css{
-    height: 5.5rem;
-    width: 6rem;
-}
-
-.icon-js{
-    height: 6rem;
-    width: 6rem;
-}
-
-.icon-ts{
-    height: 5rem;
-    width: 6rem;
-}
-
-.icon-nodejs{
-    height: 5rem;
-    width: 6rem;
-}
-
-.icon-sql{
-    height: 5.5rem;
-    width: 6rem;
-}
-
-.icon-react{
-    height: 6rem;
-    width: 6rem;
-}
-
-.skills img{
+.icon, .icon-2{
     cursor: pointer;
     transition: all 200ms ease-in-out;
+    height: 5.5rem;
+    width: 5.5rem;
 }
 
-
-.skills img:hover{
+.skills img:hover {
     transform: scale(1.1)
 }
 
@@ -441,8 +412,8 @@ left: 0;
         transform: translateX(0);
     }
     100%{
-        -webkit-transform: translateX(calc(-6rem * 14));
-        transform: translateX(calc(-6rem * 14));
+        -webkit-transform: translateX(calc(-5rem * 14));
+        transform: translateX(calc(-5rem * 14));
     }
 }
 
@@ -466,6 +437,9 @@ left: 0;
 }
 
 @media (max-width: 950px){
+    p{
+        text-align: justify;
+    }
     .menu-content{
         justify-content: center;
         h4{
@@ -493,14 +467,13 @@ left: 0;
     }
 
     .projects-content{
-        padding-top: 5rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
     }
-
+    
     .project{
         grid-template-columns: 1fr;
-        p{
-            text-align: justify;
-        }
+        padding: 0 2rem 0 2rem;
         ul{
             grid-template-columns: repeat(2, 1fr);
         }
@@ -508,6 +481,23 @@ left: 0;
 
     .buttons{
         justify-content: center;
+    }
+
+    .skills{
+        display: flex;
+        justify-content: space-between;
+        animation: none;
+        max-width: 100%;
+        gap: 0;
+    }
+
+    .icon{
+        height: 8%;
+        width: 8%;
+    }
+
+    .icon-2{
+        display: none;
     }
 }
 

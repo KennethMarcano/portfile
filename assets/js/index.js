@@ -84,7 +84,7 @@ closeMenu.addEventListener('click', () => {
     if (openMenu) {
         menu.classList.add('show2');
         menuContent.classList.add('show2');
-        closeMenu.textContent = '✕ ';
+        closeMenu.textContent = '✕';
     }
     else {
         menu.classList.remove('show2');
