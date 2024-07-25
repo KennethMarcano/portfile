@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -263,6 +264,7 @@ ul{
 .projects-buttons-slider{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .projects{
@@ -310,7 +312,7 @@ left: 0;
 .project img{
     max-width: 90%;
     border: none;
-    box-shadow: 0 0 1rem rgba(38, 36, 39, 0.986);
+    box-shadow: 0 0 0.5rem rgba(38, 36, 39, 0.986);
     border-radius: 10px;
 }
 
@@ -449,12 +451,11 @@ left: 0;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 3rem
     }
     .name-contact{
         max-width: 90%;
         h2{
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
     }
     .hand {
@@ -470,7 +471,6 @@ left: 0;
         padding-top: 8rem;
         padding-bottom: 8rem;
     }
-    
     .project{
         grid-template-columns: 1fr;
         padding: 0 2rem 0 2rem;

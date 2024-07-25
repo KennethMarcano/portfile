@@ -42,7 +42,8 @@ function showSlides() {
 }  
 
 function moveSlide(n) {  
-    const slides = document.getElementsByClassName("project"); 
+    const slides = document.getElementsByClassName("project");
+    const button = document.getElementsByClassName("button-slider");
     currentSlide += n;  
     if (currentSlide >= slides.length) { currentSlide = 0; }  
     if (currentSlide < 0) { currentSlide = slides.length - 1; }  
