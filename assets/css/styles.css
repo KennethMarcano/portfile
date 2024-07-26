@@ -154,15 +154,10 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    max-width: 60rem;
-    p {
-        font-size: 1.6rem;
-        padding-bottom: 2rem;
-    }
     h2{
         display: grid;
         align-items: center;
-        grid-template-columns: 90% 10%;
+        grid-template-columns: 90% 15%;
     }
 }
 
@@ -173,34 +168,18 @@ ul{
 }
 
 .hand {
-    animation: wave 2s infinite; 
-    max-width: 25rem;
-    font-size: 6rem;
+    animation: wave 3s infinite; 
+    font-size: 5rem;
 }  
 
 @keyframes wave {  
-    0% { transform: rotate(0deg); }  
-    50% { transform: rotate(20deg); }  
+    0% { transform: rotate(0deg); } 
+    50% { transform: rotate(-20deg); }  
+    100% { transform: rotate(0deg); }  
 }  
-
-
 
 .profile-picture{
     max-width: 25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    div{
-        text-align: center;
-    }
-    h2{
-        font-size: 3.5rem;
-        font-weight: bolder;
-    }
-    h5{
-        font-weight: lighter;
-    }
 }
 
 .profile-picture img {
@@ -253,7 +232,11 @@ ul{
 
 .projects-content{
     display: block;
-    padding: 0;
+    .buttons{
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .projects-content h2{
@@ -263,7 +246,7 @@ ul{
 
 .projects-buttons-slider{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -271,7 +254,7 @@ ul{
     position: relative;
     overflow: hidden;
     margin: auto;
-    max-width:90%;
+    max-width:100%;
 }
 
 .slider-projects{
@@ -298,7 +281,7 @@ ul{
 }
 
 .prev{
-left: 0;
+    left: 0;
 }
 
 .next{
@@ -309,8 +292,8 @@ left: 0;
     transform: scale(1.4);
 }
 
-.project img{
-    max-width: 90%;
+.project img{   
+    max-width: 100%;
     border: none;
     box-shadow: 0 0 0.5rem rgba(38, 36, 39, 0.986);
     border-radius: 10px;
@@ -453,9 +436,9 @@ left: 0;
         text-align: center;
     }
     .name-contact{
-        max-width: 90%;
         h2{
-            font-size: 1.7rem;
+            align-self: center;
+            font-size: 2rem;
         }
     }
     .hand {

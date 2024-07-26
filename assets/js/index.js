@@ -3,6 +3,24 @@ let mudaCor = true;
 let currentSlide = 0;
 const closeMenu = document.getElementById('close-menu');
 const lightBlack = document.getElementById('lightBlack');
+const sitesList = {
+    0: [
+        'https://pomodoro-three-omega.vercel.app/',
+        'https://github.com/KennethMarcano/Pomodoro.git'
+    ],
+    1: [
+        'http://35.199.67.52/',
+        'https://github.com/KennethMarcano/agenda-project.git'
+    ],
+    2: [
+        'http://35.199.67.52:82/',
+        'https://github.com/KennethMarcano/student-control.git'
+    ]
+}
+
+
+
+
 
 function selectSection(sections, sectionSelect) {
     for (i = 0; i < sections.length; i++) {
@@ -38,16 +56,18 @@ function showSlides() {
     const slides = document.getElementsByClassName("project");  
     currentSlide++;  
     if (currentSlide >= slides.length) { currentSlide = 0; } 
-    updateSlider();  
+    updateSlider();
 }  
 
 function moveSlide(n) {  
     const slides = document.getElementsByClassName("project");
-    const button = document.getElementsByClassName("button-slider");
+    const sites = document.getElementsByClassName("buttons");
     currentSlide += n;  
     if (currentSlide >= slides.length) { currentSlide = 0; }  
     if (currentSlide < 0) { currentSlide = slides.length - 1; }  
-    updateSlider();  
+    updateSlider();
+    sites[0].children[0].href = sitesList[currentSlide][0];
+    sites[0].children[1].href = sitesList[currentSlide][1];
 }  
 
 function updateSlider() {  
