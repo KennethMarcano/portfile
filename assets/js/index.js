@@ -3,20 +3,28 @@ let mudaCor = true;
 let currentSlide = 0;
 const closeMenu = document.getElementById('close-menu');
 const lightBlack = document.getElementById('lightBlack');
-const sitesList = {
-    0: [
+const sitesList = [
+    [
+        'http://35.199.67.52:82/',
+        'https://github.com/KennethMarcano/student-control.git'
+    ],
+    [
         'https://pomodoro-three-omega.vercel.app/',
         'https://github.com/KennethMarcano/Pomodoro.git'
     ],
-    1: [
+    [
         'http://35.199.67.52/',
         'https://github.com/KennethMarcano/agenda-project.git'
     ],
-    2: [
-        'http://35.199.67.52:82/',
-        'https://github.com/KennethMarcano/student-control.git'
+    [
+        'https://task-list-kenneth.netlify.app/',
+        'https://github.com/KennethMarcano/Lista-de-tarefas'
     ]
-}
+]
+
+const sites = document.getElementsByClassName("buttons");
+sites[0].children[0].href = sitesList[0][0];
+sites[0].children[1].href = sitesList[0][1];
 
 
 
@@ -44,41 +52,41 @@ function showShadow(menu) {
     return menu.classList.add('showBorderShadow');
 }
 
-function showInWindows(element, distance, heightWindow, percentWindows){
+function showInWindows(element, distance, heightWindow, percentWindows) {
     if (distance <= heightWindow * percentWindows) {
         element.classList.add('show1');
         return;
     }
     return element.classList.remove('show1');
-} 
+}
 
-function showSlides() {  
-    const slides = document.getElementsByClassName("project");  
-    currentSlide++;  
-    if (currentSlide >= slides.length) { currentSlide = 0; } 
+function showSlides() {
+    const slides = document.getElementsByClassName("project");
+    currentSlide++;
+    if (currentSlide >= slides.length) { currentSlide = 0; }
     updateSlider();
-}  
+}
 
-function moveSlide(n) {  
+function moveSlide(n) {
     const slides = document.getElementsByClassName("project");
     const sites = document.getElementsByClassName("buttons");
-    currentSlide += n;  
-    if (currentSlide >= slides.length) { currentSlide = 0; }  
-    if (currentSlide < 0) { currentSlide = slides.length - 1; }  
+    currentSlide += n;
+    if (currentSlide >= slides.length) { currentSlide = 0; }
+    if (currentSlide < 0) { currentSlide = slides.length - 1; }
     updateSlider();
     sites[0].children[0].href = sitesList[currentSlide][0];
     sites[0].children[1].href = sitesList[currentSlide][1];
-}  
+}
 
-function updateSlider() {  
-    const slides = document.getElementsByClassName("slider-projects")[0];  
-    const slideWidth = slides.clientWidth; 
-    slides.style.transform = `translateX(${-currentSlide * slideWidth}px)`; 
-}  
- 
+function updateSlider() {
+    const slides = document.getElementsByClassName("slider-projects")[0];
+    const slideWidth = slides.clientWidth;
+    slides.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+}
+
 updateSlider();
 
-window.addEventListener('resize',() => {
+window.addEventListener('resize', () => {
     updateSlider();
 })
 
