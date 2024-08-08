@@ -26,10 +26,6 @@ const sites = document.getElementsByClassName("buttons");
 sites[0].children[0].href = sitesList[0][0];
 sites[0].children[1].href = sitesList[0][1];
 
-
-
-
-
 function selectSection(sections, sectionSelect) {
     for (i = 0; i < sections.length; i++) {
         var bounding = sections[i].getBoundingClientRect();
