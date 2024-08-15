@@ -374,8 +374,8 @@ ul{
     align-items: center;
     animation: scroll 30s linear infinite;
     -webkit-animation: scroll 30s linear infinite;
-    width: calc(6rem * 16);
-    gap: 10rem;
+    width: calc(5rem * 30);
+    gap: 5rem;
 }
 
 .slider-skills {
@@ -388,8 +388,8 @@ ul{
 
 .icon, .icon-2{
     cursor: pointer;
-    transition: all 200ms ease-in-out;
-    max-width: 5rem;
+    transition: all 300ms ease-in-out;
+    height: 5rem;
 }
 
 .skills img:hover {
@@ -402,8 +402,8 @@ ul{
         transform: translateX(0);
     }
     100%{
-        -webkit-transform: translateX(calc(-5rem * 16));
-        transform: translateX(calc(-5rem * 16));
+        -webkit-transform: translateX(calc(-5rem * 30));
+        transform: translateX(calc(-5rem * 30));
     }
 }
 
