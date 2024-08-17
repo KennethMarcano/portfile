@@ -18,7 +18,12 @@
 </head>
 
 <body class="secondary-bg">
-    <div id='close-menu' class="close-menu">☰</div>
+    <div id='close-menu' class="close-menu" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    
     <div id="menu" class="menu ">
         <div id="menu-content" class="main-content menu-content">
             <a href="#">Portfolio</a>
@@ -180,8 +185,10 @@
                 <label class="button-slider next" onclick="moveSlide(1)">&#10095;</label>
             </div>
             <div class="buttons">
+                <label class="button-slider-mobile prev" onclick="moveSlide(-1)">&#10094;</label>
                 <a href="" target="_blank">Open Site</a>
                 <a href="" target="_blank">View Code</a>
+                <label class="button-slider-mobile next" onclick="moveSlide(1)">&#10095;</label>
             </div>
 
         </div>

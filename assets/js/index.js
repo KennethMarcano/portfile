@@ -1,6 +1,8 @@
 let openMenu = false;
 let mudaCor = true;
 let currentSlide = 0;
+const menu = document.getElementById('menu');
+const menuContent = document.getElementById('menu-content');
 const closeMenu = document.getElementById('close-menu');
 const lightBlack = document.getElementById('lightBlack');
 const sitesList = [
@@ -25,6 +27,10 @@ const sitesList = [
 const sites = document.getElementsByClassName("buttons");
 sites[0].children[0].href = sitesList[0][0];
 sites[0].children[1].href = sitesList[0][1];
+
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
 
 function selectSection(sections, sectionSelect) {
     for (i = 0; i < sections.length; i++) {
@@ -84,6 +90,10 @@ updateSlider();
 
 window.addEventListener('resize', () => {
     updateSlider();
+    openMenu = false;
+    closeMenu.classList.remove('change');
+    menu.classList.remove('show2');
+    menuContent.classList.remove('show2');
 })
 
 window.addEventListener('scroll', () => {
@@ -103,29 +113,32 @@ window.addEventListener('scroll', () => {
 })
 
 closeMenu.addEventListener('click', () => {
-    const menu = document.getElementById('menu');
-    const menuContent = document.getElementById('menu-content');
     openMenu = !openMenu;
     if (openMenu) {
         menu.classList.add('show2');
         menuContent.classList.add('show2');
-        closeMenu.textContent = '✕';
     }
     else {
         menu.classList.remove('show2');
         menuContent.classList.remove('show2');
-        closeMenu.textContent = '☰'
     }
 })
 
 lightBlack.addEventListener('click', () => {
     const body = document.body;
+    let x = closeMenu.children
     if (mudaCor) {
+        for(let i =0; i < x.length; i++) {
+            x[i].style.backgroundColor= '#ffffff';
+        }
         body.classList.remove('secondary-bg');
         body.classList.add('primary-bg');
         lightBlack.textContent = '☀️';
     }
     else {
+        for(let i =0; i < x.length; i++) {
+            x[i].style.backgroundColor= '#0c0c0c';
+        }
         body.classList.add('secondary-bg');
         body.classList.remove('primary-bg');
         lightBlack.textContent = '🌙';
