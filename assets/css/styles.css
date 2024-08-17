@@ -261,7 +261,7 @@ ul {
 
 .projects-buttons-slider {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -611,6 +611,7 @@ ul {
     }
 
     .button-slider {
-        display: none;
+        background-color: rgba(196, 192, 192, 0.8);
     }
+
 }
