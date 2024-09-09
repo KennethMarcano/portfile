@@ -7,7 +7,7 @@ const closeMenu = document.getElementById('close-menu');
 const lightBlack = document.getElementById('lightBlack');
 const sitesList = [
     [
-        'http://35.199.67.52:82/',
+        'https://student-control.vercel.app/',
         'https://github.com/KennethMarcano/student-control.git'
     ],
     [
@@ -15,7 +15,7 @@ const sitesList = [
         'https://github.com/KennethMarcano/Pomodoro.git'
     ],
     [
-        'http://35.199.67.52/',
+        'https://agenda-project.onrender.com/',
         'https://github.com/KennethMarcano/agenda-project.git'
     ],
     [
