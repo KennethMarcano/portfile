@@ -5,6 +5,7 @@ const menu = document.getElementById('menu');
 const menuContent = document.getElementById('menu-content');
 const closeMenu = document.getElementById('close-menu');
 const lightBlack = document.getElementById('lightBlack');
+const linkCv = 'https://drive.google.com/file/d/19ku-bh3Bk-9V8k1s9HVeFSqaLK-5t_Pa/view?usp=sharing';
 const sitesList = [
     [
         'https://student-control.vercel.app/',
@@ -31,6 +32,13 @@ sites[0].children[1].href = sitesList[0][1];
 function myFunction(x) {
     x.classList.toggle("change");
   }
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    const aUrl = document.querySelectorAll('a.link-cv');
+    for(let i = 0; i < aUrl.length; i++){
+        aUrl[i].href = linkCv;
+    }
+})
 
 function selectSection(sections, sectionSelect) {
     for (i = 0; i < sections.length; i++) {
